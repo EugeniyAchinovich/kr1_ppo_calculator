@@ -33,16 +33,7 @@ public class MainActivity extends AppCompatActivity {
         bplus = findViewById(R.id.bplus);
         bmin = findViewById(R.id.bmin);
         bmul = findViewById(R.id.bmul);
-        bdiv = findViewById(R.id.bdiv);
-        binv = findViewById(R.id.binv);
-        bsqrt = findViewById(R.id.bsqrt);
-        bsquare = findViewById(R.id.bsquare);
-        bfact = findViewById(R.id.bfact);
-        bln = findViewById(R.id.bln);
-        blog = findViewById(R.id.blog);
-        btan = findViewById(R.id.btan);
-        bsin = findViewById(R.id.bsin);
-        bcos = findViewById(R.id.bcos);
+        bdiv = findViewById(R.id.bdiv);;
         bb1 = findViewById(R.id.bb1);
         bb2 = findViewById(R.id.bb2);
         bc = findViewById(R.id.bc);
@@ -51,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         tvmain = findViewById(R.id.tvmain);
         tvsec = findViewById(R.id.tvsec);
 		
-		configureButtonNext();
+	configureButtonNext();
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,14 +149,6 @@ public class MainActivity extends AppCompatActivity {
                 tvmain.setText(tvmain.getText()+"÷");
             }
         });
-        bsqrt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String val = tvmain.getText().toString();
-                double r = Math.sqrt(Double.parseDouble(val));
-                tvmain.setText(String.valueOf(r));
-            }
-        });
         bb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -183,60 +166,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvsec.setText(bpi.getText());
                 tvmain.setText(tvmain.getText()+pi);
-            }
-        });
-        bsin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tvmain.setText(tvmain.getText()+"sin");
-            }
-        });
-        bcos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tvmain.setText(tvmain.getText()+"cos");
-            }
-        });
-        btan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tvmain.setText(tvmain.getText()+"tan");
-            }
-        });
-        binv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tvmain.setText(tvmain.getText()+"^"+"(-1)");
-            }
-        });
-        bfact.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int val = Integer.parseInt(tvmain.getText().toString());
-                int fact = factorial(val);
-                tvmain.setText(String.valueOf(fact));
-                tvsec.setText(val+"!");
-            }
-        });
-        bsquare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                double d = Double.parseDouble(tvmain.getText().toString());
-                double square = d*d;
-                tvmain.setText(String.valueOf(square));
-                tvsec.setText(d+"²");
-            }
-        });
-        bln.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tvmain.setText(tvmain.getText()+"ln");
-            }
-        });
-        blog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tvmain.setText(tvmain.getText()+"log");
             }
         });
         bequal.setOnClickListener(new View.OnClickListener() {
